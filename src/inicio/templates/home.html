@@ -7,7 +7,12 @@
     <ul>
         {% for miitem in milista %}
             <li>
-                {{miitem}}
+                {{miitem}}_
+                {% if miitem > 3 %}
+                    numero mayor de 3
+                {% elif miitem <= 3 %}
+                    el numero es menor que 3
+                {% endif %}
                 <br>
                 {{forloop.counter}}
             </li>
