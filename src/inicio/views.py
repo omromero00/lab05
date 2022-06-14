@@ -9,6 +9,7 @@ def miHomeView(request, *args, **kwargs):
     micontexto={
         "mitexto": "hola texto",
         "minumero": 123,
+        "milista":[1, 2, 3, 4],
     }
     return render(request, "home.html", micontexto)
 

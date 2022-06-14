@@ -4,4 +4,13 @@
     {{ request.user}}<br>
     {{ mitexto }}
     {{ minumero }}
-    {% endblock %}
+    <ul>
+        {% for miitem in milista %}
+            <li>
+                {{miitem}}
+                <br>
+                {{forloop.counter}}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
