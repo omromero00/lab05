@@ -4,8 +4,9 @@ from django.shortcuts import render
 
 from django.http import HttpResponse
 
-def miHomeView(*args, **kwargs):
-    return HttpResponse("<h1> Mi primera vista </h1>")
+def miHomeView(request, *args, **kwargs):
+    print(request.user)
+    return render(request, "home.html", {})
 
 def otraVista(*args, **kwargs):
     return HttpResponse("<h1> Mi otra vista </h1>")
