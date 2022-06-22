@@ -23,3 +23,9 @@ def personaCreateView(request):
 
 def searchForHelp(request):
   return render(request,'personas/search.html',{})
+
+def metodoGet(request):
+  print('GET' , request.GET)
+  print('POST' , request.POST)
+  context={}
+  return render(request,'personas/metodoGet.html',context)
