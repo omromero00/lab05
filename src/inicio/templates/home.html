@@ -2,12 +2,12 @@
 {% block content %}
     <h2>Hola mundo desde Django</h2>
     {{ request.user}}<br>
-    {{ mitexto }}
-    {{ minumero }}
+    {{ mitexto|upper}
+    {{ minumero|divisibleby:2 }}
     <ul>
         {% for miitem in milista %}
             <li>
-                {{miitem}}_
+                {{miitem|add:2}}_
                 {% if miitem > 3 %}
                     numero mayor de 3
                 {% elif miitem <= 3 %}
