@@ -28,5 +28,13 @@ def metodoGet(request):
   print('GET' , request.GET)
   print('POST' , request.POST)
   context={}
+  return render(request,'personas/metodoGet.html',context)
+
+def metodoPost(request):
+  print(request)
+  if request.method=="POST":
+    nombre=request.POST.get("q")
+    print(nombre)
+  context={}
   return render(request,'personas/metodoPost.html',context)
 
