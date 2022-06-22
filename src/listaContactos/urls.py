@@ -26,4 +26,5 @@ urlpatterns = [
     path('agregar/',personaCreateView , name = "crearpersona"),
     path('search/',searchForHelp, name = "buscar"),
     path('metodoGet/',metodoGet, name = "Get"),
+    path('metodoPost/',metodoGet, name = "Post"),
 ]
